@@ -1,8 +1,8 @@
-<canvas width="600" height="400"></canvas>
+<canvas width="800" height="1600"></canvas>
 
 <style>
     h1{
-        margin-left: 130px;
+        text-align: center;
     }
 </style>
 <h1>Acerte o centro do alvo!</h1>
@@ -10,10 +10,10 @@
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
     pincel.fillStyle = 'lightgray';
-    pincel.fillRect(0, 0, 600, 400);
-    var raio = 10
-    var xAleatorio = sorteiaPosicao(600);
-    var yAleatorio = sorteiaPosicao(400);
+    pincel.fillRect(0, 0, 800, 1600);
+    var raio = 30
+    var xAleatorio = sorteiaPosicao(800);
+    var yAleatorio = sorteiaPosicao(1600);
 
     function desenhaCirculo(x, y, raio, cor){
         pincel.fillStyle = cor;
@@ -22,11 +22,11 @@
         pincel.fill();
     }
     function limpaTela(){
-        pincel.clearRect(0, 0, 600, 400);
+        pincel.clearRect(0, 0, 800, 1600);
     }
     function desenhaAlvo(x, y){
-        desenhaCirculo( x, y, raio + 20, 'red');
-        desenhaCirculo( x, y, raio + 10, 'white');
+        desenhaCirculo( x, y, raio + 50, 'red');
+        desenhaCirculo( x, y, raio + 40, 'white');
         desenhaCirculo( x, y, raio, 'red');
     }
 
@@ -37,13 +37,13 @@
 
     function atualizaTela() {
         limpaTela()
-        xAleatorio = sorteiaPosicao(600);
-        yAleatorio = sorteiaPosicao(400);
+        xAleatorio = sorteiaPosicao(800);
+        yAleatorio = sorteiaPosicao(1600);
 
         desenhaAlvo(xAleatorio, yAleatorio);
     }
 
-    setInterval( atualizaTela, 800);
+    setInterval( atualizaTela, 1000);
 
     function dispara(evento){
         var x = evento.pageX - tela.offsetLeft;
