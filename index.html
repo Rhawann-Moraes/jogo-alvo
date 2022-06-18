@@ -1,4 +1,4 @@
-<canvas width="1000" height="1800"></canvas>
+<canvas width="1000" height="1600"></canvas>
 
 <style>
     h1{
@@ -20,10 +20,10 @@
     var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
     pincel.fillStyle = 'lightgray';
-    pincel.fillRect(0, 0, 1000, 1800);
+    pincel.fillRect(0, 0, 1000, 1600);
     var raio = 40
     var xAleatorio = sorteiaPosicao(1000);
-    var yAleatorio = sorteiaPosicao(1800);
+    var yAleatorio = sorteiaPosicao(1600);
 
     function desenhaCirculo(x, y, raio, cor){
         pincel.fillStyle = cor;
