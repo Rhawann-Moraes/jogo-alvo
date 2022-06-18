@@ -11,7 +11,7 @@
     var pincel = tela.getContext('2d');
     pincel.fillStyle = 'lightgray';
     pincel.fillRect(0, 0, 1000, 1800);
-    var raio = 30
+    var raio = 40
     var xAleatorio = sorteiaPosicao(1000);
     var yAleatorio = sorteiaPosicao(1800);
 
@@ -25,8 +25,8 @@
         pincel.clearRect(0, 0, 1000, 1800);
     }
     function desenhaAlvo(x, y){
-        desenhaCirculo( x, y, raio + 50, 'red');
-        desenhaCirculo( x, y, raio + 40, 'white');
+        desenhaCirculo( x, y, raio + 60, 'red');
+        desenhaCirculo( x, y, raio + 50, 'white');
         desenhaCirculo( x, y, raio, 'red');
     }
 
